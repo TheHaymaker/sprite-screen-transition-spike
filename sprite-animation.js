@@ -48,9 +48,9 @@ var overlay,
   canvas,
   frames = 0,
   id;
-function gameLoop(event) {
+function overlayTakeOver(event) {
   if (frames < 21) {
-    id = window.requestAnimationFrame(gameLoop);
+    id = window.requestAnimationFrame(overlayTakeOver);
 
     overlay.update(event);
     overlay.render(event);

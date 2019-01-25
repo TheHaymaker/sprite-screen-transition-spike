@@ -10,7 +10,13 @@
   <body>
     <div class="transition-overlay"></div>
     <canvas id="overlayAnimation"></canvas>
-    <nav><button class="trigger-overlay">Transition the page</button></nav>
+    <nav>
+      <div class="logo">
+        <canvas id="four-satellites"></canvas> <canvas id="four-satellites-1"></canvas>
+        <canvas id="four-satellites-2"></canvas> <canvas id="four-satellites-3"></canvas>
+      </div>
+      <button class="trigger-overlay">Transition the page</button>
+    </nav>
     <h2>Hello, World!</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum tempore quasi rerum. Eum nulla
@@ -36,12 +42,16 @@
           ticksPerFrame: 3,
           length: 0
         });
-        await gameLoop();
+        await overlayTakeOver();
 
         setTimeout(() => {
           e.target.style.pointerEvents = 'all';
         }, 1500);
       });
     </script>
+    <script src="logo-animation.js"></script>
+    <script src="logo-animation.1.js"></script>
+    <script src="logo-animation.2.js"></script>
+    <script src="logo-animation.3.js"></script>
   </body>
 </html>
