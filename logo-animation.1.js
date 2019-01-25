@@ -58,7 +58,7 @@
   }
 
   // Get canvas
-  canvas = document.getElementById('four-satellites-1');
+  canvas = document.getElementById("four-satellites-1");
   canvas.width = 400;
   canvas.height = 400;
 
@@ -67,7 +67,7 @@
 
   // Create sprite
   logo = sprite({
-    context: canvas.getContext('2d'),
+    context: canvas.getContext("2d"),
     width: 8400,
     height: 400,
     image: logoImage,
@@ -76,8 +76,8 @@
   });
 
   // Load sprite sheet
-  logoImage.addEventListener('load', () => {
+  logoImage.addEventListener("load", () => {
     setTimeout(logoLoop, 500);
   });
-  logoImage.src = 'four-satellites.png';
+  logoImage.src = "four-sats-only.png";
 })();

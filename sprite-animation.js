@@ -19,12 +19,12 @@
   // MIT license
 
   var lastTime = 0;
-  var vendors = ['ms', 'moz', 'webkit', 'o'];
+  var vendors = ["ms", "moz", "webkit", "o"];
   for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+    window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
     window.cancelAnimationFrame =
-      window[vendors[x] + 'CancelAnimationFrame'] ||
-      window[vendors[x] + 'CancelRequestAnimationFrame'];
+      window[vendors[x] + "CancelAnimationFrame"] ||
+      window[vendors[x] + "CancelRequestAnimationFrame"];
   }
 
   if (!window.requestAnimationFrame)
@@ -113,7 +113,7 @@ function sprite(options) {
 }
 
 // Get canvas
-canvas = document.getElementById('overlayAnimation');
+canvas = document.getElementById("overlayAnimation");
 canvas.width = 600;
 canvas.height = 600;
 
@@ -121,4 +121,4 @@ canvas.height = 600;
 overlayImage = new Image();
 
 // Create sprite
-overlayImage.src = 'screen-transition-final.png';
+overlayImage.src = "screen-transition-smooth.png";
