@@ -77,7 +77,7 @@
 
   // Load sprite sheet
   logoImage.addEventListener("load", () => {
-    setTimeout(logoLoop, 2000);
+    setTimeout(logoLoop, 2100);
   });
 
   logoImage.src = "four-sats-only.png";
