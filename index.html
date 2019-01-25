@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sprite Animation</title>
+  </head>
+  <body>
+    <div class="transition-overlay"></div>
+    <canvas id="overlayAnimation"></canvas>
+    <nav><button class="trigger-overlay">Transition the page</button></nav>
+
+    <script src="sprite-animation.js"></script>
+    <script>
+      let transitionBtn = document.querySelector('.trigger-overlay');
+
+      transitionBtn.addEventListener('click', async e => {
+        e.target.style.pointerEvents = 'none';
+        frames = 0;
+        frameIndex = 0;
+        tickCount = 0;
+        overlay = sprite({
+          context: canvas.getContext('2d'),
+          width: 13200,
+          height: 600,
+          image: overlayImage,
+          numberOfFrames: 22,
+          ticksPerFrame: 3,
+          length: 0
+        });
+        await gameLoop();
+
+        setTimeout(() => {
+          e.target.style.pointerEvents = 'all';
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>
