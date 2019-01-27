@@ -121,4 +121,4 @@ canvas.height = 600;
 overlayImage = new Image();
 
 // Create sprite
-overlayImage.src = "screen-transition-smooth.png";
+overlayImage.src = "screen-transition-noise-2.png";
