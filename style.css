@@ -23,11 +23,17 @@ html body {
   position: relative;
   width: 100px;
   height: 100px;
+  transition: 0.75s all cubic-bezier(0, 0.96, 0, 1.02);
+}
+
+.logo.active {
+  transform: scale(1.2);
 }
 #four-satellites,
 #four-satellites-1,
 #four-satellites-2,
-#four-satellites-3 {
+#four-satellites-3,
+#four-satellites-4 {
   position: absolute;
   pointer-events: none;
   top: 0;
@@ -41,41 +47,44 @@ html body {
   margin-left: -25%;
 }
 
+#four-satellites-4 {
+  opacity: 0;
+  transition: 2s all cubic-bezier(0, 0.96, 0, 1.02);
+}
+
+#four-satellites-4.active {
+  opacity: 1;
+}
+
 #four-satellites-1 {
   transform-origin: 50%;
   transform: rotate(18deg);
+  transition: 1s all ease;
 }
 
 #four-satellites-2 {
   transform-origin: 50%;
   transform: rotate(-38deg);
+  transition: 1s all ease;
 }
 
 #four-satellites-3 {
   transform-origin: 50%;
   transform: rotate(-18deg);
+  transition: 1s all ease;
 }
 
-/* .transition-overlay {
-  background-image: url('screen-transition.png');
-  background-position: 0% center;
-  position: absolute;
-  width: 800px;
-  height: 800px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  pointer-events: none;
-  transition: 0s opacity ease;
-  opacity: 0;
-} */
+.logo.active #four-satellites-1 {
+  transform-origin: 50%;
+  transform: rotate(-18deg);
+}
 
-/* .transition-overlay.active {
-  animation: 1 fly-baby-fly 2s steps(19) 0s forwards;
-  opacity: 1;
-} */
+.logo.active #four-satellites-2 {
+  transform-origin: 50%;
+  transform: rotate(38deg);
+}
 
-/* @keyframes fly-baby-fly {
-  100% {
-    background-position-x: 100%;
-  }
-} */
+.logo.active #four-satellites-3 {
+  transform-origin: 50%;
+  transform: rotate(-90deg);
+}
